@@ -1,20 +1,21 @@
 {
-    "name": "ccovey/odbc-driver",
+    "name": "osaris/odbc-driver",
     "description": "",
     "authors": [
         {
             "name": "Cody Covey",
             "email": "ccovey14@gmail.com"
+        },
+        {
+            "name": "Raphaël Emourgeon",
+            "email": "raphael.emourgeon@gmail.com"
         }
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.1.x",
-        "illuminate/database": "4.1.x",
+        "illuminate/support": "*",
+        "illuminate/database": "*",
         "ext-pdo_odbc": "*"
-    },
-    "require-dev": {
-        "mockery/mockery": "dev-master"
     },
     "autoload": {
         "classmap": [

@@ -1,26 +1,26 @@
-l4-odbc-driver
+odbc-driver
 ==============
 
-Laravel 4 ODBC 
+Laravel 5 ODBC
 
 Installation
 ============
 
-To Install this in your Laravel 4.1 app add
+To Install this in your Laravel 5 app add
 
 ```json
 require {
-  "ccovey/odbc-driver-l4": "1.1.x"
+  "osaris/odbc-driver": "1.1.x"
 }
 ```
 
-And then run 
+And then run
 
 `composer install`
 
 This will download the required package from Packagist.org
 
-Then in your app/config directory open app.php and find 
+Then in your app/config directory open app.php and find
 
 `'Illuminate\Database\DatabaseServiceProvider',`
 
@@ -80,5 +80,3 @@ If you would like to use a Laravel provided file just add that instead. For exam
     'password' => 'bar',
     'database' => '',
 ),
-
-
