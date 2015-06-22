@@ -14,8 +14,7 @@
     "require": {
         "php": ">=5.3.0",
         "illuminate/support": "*",
-        "illuminate/database": "*",
-        "ext-pdo_odbc": "*"
+        "illuminate/database": "*"
     },
     "autoload": {
         "classmap": [
