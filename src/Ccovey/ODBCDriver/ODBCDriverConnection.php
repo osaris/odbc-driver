@@ -26,6 +26,19 @@ class ODBCDriverConnection extends Connection
 		return $this->withTablePrefix(new Grammar);
 	}
 
+	protected function getDefaultPostProcessor()
+	{
+		$grammarConfig = $this->getGrammarConfig();
+		if($grammarConfig) {
+			$packageProcessor = "Ccovey\\ODBCDriver\\Processors\\" . $grammarConfig;
+			if (class_exists($packageProcessor)) {
+				return new $packageProcessor;
+			}
+		}
+
+		return new Processor;
+	}
+
 	/**
 	 * Default grammar for specified Schema
 	 * @return Schema\Grammars\Grammar
