@@ -44,22 +44,21 @@ class ODBCDriverConnectionFactory extends ConnectionFactory
 		}
 
 		switch ($driver) {
-            case 'mysql':
-                return new MySqlConnection($connection, $database, $prefix, $config);
+      case 'mysql':
+        return new MySqlConnection($connection, $database, $prefix, $config);
 
-            case 'pgsql':
-                return new PostgresConnection($connection, $database, $prefix, $config);
+      case 'pgsql':
+        return new PostgresConnection($connection, $database, $prefix, $config);
 
-            case 'sqlite':
-                return new SQLiteConnection($connection, $database, $prefix, $config);
+      case 'sqlite':
+        return new SQLiteConnection($connection, $database, $prefix, $config);
 
-            case 'sqlsrv':
-                return new SqlServerConnection($connection, $database, $prefix, $config);
-                
-            case 'odbc':
-                return new ODBCDriverConnection($connection, $database, $prefix, $config);
-        }
+      case 'sqlsrv':
+        return new SqlServerConnection($connection, $database, $prefix, $config);
 
-        throw new \InvalidArgumentException("Unsupported driver [$driver]");
+      case 'odbc':
+        return new ODBCDriverConnection($connection, $database, $prefix, $config);
+    }
+    throw new \InvalidArgumentException("Unsupported driver [$driver]");
 	}
 }
